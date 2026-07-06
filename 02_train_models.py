@@ -49,7 +49,7 @@ for nom, (modele, params) in modeles.items():
         mlflow.log_params(grid.best_params_)
         mlflow.log_metric("auc", auc)
         mlflow.log_metric("score_metier", score_business)
-        mlflow.sklearn.log_model(best, nom)
+        mlflow.sklearn.log_model(best, nom, serialization_format="pickle")
 
         print(f"{nom} -> AUC: {auc:.3f} | Score métier: {score_business:.3f}")
         print(classification_report(y_test, y_pred))
