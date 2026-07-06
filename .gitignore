@@ -1,0 +1,7 @@
+venv/
+mlflow_artifacts/
+data/
+__pycache__/
+*.pyc
+model.pkl
+*.zip
